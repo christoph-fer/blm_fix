@@ -23,6 +23,7 @@ body {
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
+  position: static;
 }
 
 .beneheader {
@@ -254,8 +255,13 @@ label {
 }
 
 .section4 {
+  max-width: 1600px;
   width: 100%;
-  margin: 150px auto 0px auto;
+  margin: 100px auto;
+  font-family: "Inter", sans-serif;
+  line-height: 1.3em;
+  /* font-weight: 500; */
+  font-size: 18px;
 }
 
 .section4image {
@@ -404,6 +410,12 @@ ul {
     width: unset;
   }
 
+  .section4 {
+    max-width: unset;
+    margin: 50px;
+    width: unset;
+  }
+
   .section5 {
     max-width: unset;
     margin: 50px;
@@ -461,7 +473,9 @@ ul {
   }
 
   .section4 {
-    margin: 30px 0px;
+    margin: 70px 70px 0px 70px;
+    max-width: unset;
+    width: unset;
   }
 
   .section5 {
@@ -499,7 +513,7 @@ ul {
   }
 
   .section4 {
-    margin: 30px 0px;
+    margin: 50px 50px 0px 50px;
   }
 
   .section4content {
@@ -567,6 +581,19 @@ ul {
     margin-left: 30px;
   }
 
+  .section3 {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .section3 > img {
+    margin-left: 30px;
+  }
+
+  .section4 {
+    margin: 0px 0px 50px 0px;
+    padding: 0px 30px;
+  }
+
   .section2image {
     padding: 30px;
   }
@@ -580,21 +607,18 @@ ul {
     font-size: 15px;
   }
 
-  .section3 {
-    margin: 0px 30px;
-  }
-
   .section3 p,
   .section3 ul {
     font-size: 15px;
   }
 
-  .section4 {
-    margin: 30px 0px;
+  .section4 p,
+  .section4 ul {
+    font-size: 15px;
   }
 
   .section5 {
-    margin: 50px 30px;
+    margin: 0px 30px;
   }
 
   .section4content {
