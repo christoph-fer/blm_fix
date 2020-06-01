@@ -165,7 +165,7 @@ input[type="button" i] {
 input[type="button"] {
   -webkit-appearance: none !important;
   appearance: none !important;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif !important;
   font-size: 11px;
   font-weight: 500;
   background-color: #ba3027;
@@ -691,6 +691,9 @@ ul {
 }
 
 @media only screen and (max-width: 640px) {
+  .section1content {
+    grid-gap: 20px;
+  }
   .section6 > img {
     margin-left: 30px;
   }
