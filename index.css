@@ -157,7 +157,14 @@ input[type="text"] {
   color: #757575;
 }
 
+input[type="button" i] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
 input[type="button"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
   font-family: "Inter", sans-serif;
   font-size: 11px;
   font-weight: 500;
