@@ -22,8 +22,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   background-attachment: fixed;
-  background-position: center;
-  position: static;
+  background-position: top;
 }
 
 .beneheader {
@@ -135,10 +134,9 @@ body {
   font-size: 20px;
 }
 
-input[type="text"],
-select {
-  font-family: "Work Sans", sans-serif;
-  font-size: 11px;
+input[type="text"] {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   width: 100%;
   padding: 10px 15px;
   margin: 8px 0;
@@ -146,13 +144,21 @@ select {
   border: 1px solid #e2e2e2;
   border-radius: 35px;
   outline: none;
+  appearance: none;
+  -webkit-appearance: none;
   filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05));
 }
 
-input[type="submit"] {
-  -webkit-appearance: none;
-  appearance: none;
-  font-family: "Work Sans", sans-serif;
+.text_input_fixed {
+  font-family: "Inter", sans-serif;
+  position: absolute;
+  padding: 17px;
+  font-size: 17px;
+  color: #757575;
+}
+
+input[type="button"] {
+  font-family: "Inter", sans-serif;
   font-size: 11px;
   font-weight: 500;
   background-color: #ba3027;
@@ -162,16 +168,26 @@ input[type="submit"] {
   padding: 10px 15px;
 
   text-decoration: none;
-  box-shadow: 0 1px 5px 0 rgba(186, 49, 39, 0.5);
+  box-shadow: 0 5px 10px 0 rgba(186, 49, 39, 0.3);
   cursor: pointer;
-  /* align-self: center;
-    margin-left: auto; */
+  align-self: center;
+  margin-left: auto;
   letter-spacing: 1.5px;
   outline: none;
+  transition: 600ms;
 }
 
-input[type="text"]:focus,
-select:focus {
+input[type="button"]:hover {
+  background-color: #ba3027;
+  box-shadow: 0 10px 15px 0 rgba(186, 49, 39, 0.3);
+}
+
+input[type="button"]:active {
+  background-color: #ba3027;
+  box-shadow: 0 3px 6px 0 rgba(186, 49, 39, 0.144);
+}
+
+input[type="text"]:focus {
   border: 1px solid #ba3027;
   transition: 200ms ease-in;
 }
@@ -561,6 +577,9 @@ ul {
 }
 
 @media only screen and (max-width: 640px) {
+  .section1 {
+    background-size: 150vh;
+  }
   .section1content {
     padding: 30px;
   }
