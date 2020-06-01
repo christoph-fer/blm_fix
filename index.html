@@ -1,0 +1,337 @@
+
+<html>
+
+<head>
+    <title>Black Lives Matter | ACT NOW by Benefactory</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="kZXOm5biSJdQ5AWd175wAbFNKOhH4kU0tOsaqMJI">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
+    <meta name="theme-color" content="#BA3027" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<style type="text/css">
+
+input[type="button"] {
+    font-family: "Work Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    background-color: #ba3027;
+    border: none;
+    color: white;
+    border-radius: 35px;
+    padding: 10px 15px;
+    text-decoration: none;
+    box-shadow: 0 1px 5px 0 rgba(186, 49, 39, 0.5);
+    cursor: pointer;
+    align-self: center;
+    margin-left: auto;
+    letter-spacing: 1.5px;
+    outline: none;
+
+}
+</style>
+</head>
+<body>
+    
+<div class="wrapper">
+        <div class="section1">
+            <div class="beneheader">
+                <div class="benelogo">
+                    <a href="http://benefactory.live/">
+                        <img src="assets/Benefactory_White.png" height="80">
+                    </a>
+                </div>
+                <div>
+
+                </div>
+                <div class="socialmedia">
+                    <!-- <img src="Assets/instagram-icon.svg" height="17">
+                    <img src="Assets/mail-icon.png" height="20"> -->
+
+                </div>
+
+            </div>
+
+            <div class="section1content">
+                <div class="mainheading ">
+                    <span class="headertext" style="text-transform: uppercase;">Black Lives Matter<span class="bene_dot"
+                            style="color: #BA3027">.</span><br><span
+                            style="line-height: 0px;">_</span></span>
+
+                    <!-- <p class="head_desc">In the past 48 hours, 2000 new fires have started in the Amazon despite the
+                        President’s ban on deliberate burning.</p> -->
+                </div>
+                <div class="donate_card">
+                    <div class="donate_head">
+                        <div class="donate_desc">
+                            <img src="assets/ACT_NOW_Logo_(Med).png" height="50">
+                            <span>Donate to bail out people arrested while protesting George Floyd's death. 100% of your donation goes to the Bail Project.</span>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div id="errors" style="color: red">
+                        </div>
+
+                        <img src="assets/donate_header.svg" height="30px">
+                        <form action="/payment" method="POST" id="pay-form">
+                            <input type="hidden" name="stripe_token" id="stripe_token">
+                            <!-- <p>
+                            <i class="fa fa-info-circle">&nbsp;<em><span style="color: #666666;">Only available to donors from India. Foreign contributions are not permitted.</span>
+                                </em></i></p> -->
+
+                            <label>NAME</label>
+                            <div class="bene_form">
+                                <input type="text" id="first_name" name="fname" value="" placeholder="First Name">
+                                <input type="text" id="last_name" name="lname" value="" placeholder="Last Name">
+
+                            </div><br>
+                            <label>CONTACT</label>
+                            <div class="bene_form">
+                                <input type="text" id="email" name="email" value="" placeholder="E-mail">
+                                <input type="text" id="mobile" name="mobile" value="" placeholder="Mobile">
+
+                            </div><br>
+                            <!-- <label>PAN CARD No</label>
+                            <div class="bene_form">
+                                <input type="text" id="pancard" name="pancard" value="" placeholder="Only if you require an 80G">
+                                <select name="country" id="country" style="background-color: #fff">
+                                    <option value="India" selected>India</option>
+                                </select>    
+
+                            </div><br><br> -->
+                            
+                            <label>AMOUNT</label>
+                            <div class="bene_form">
+                                <input type="text" id="amount" name="amount" value="" placeholder="Enter Amount">
+                                <!-- <input class="inputbutton" type="button"  id="rzp-button1"  value="DONATE NOW"> -->
+                                <input type="button" class="inputbutton" id="btn_form_submit" value="DONATE NOW">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="section2">
+            <img src="assets/the_situation_header.svg" height="25px">
+            <div class="section2image" style="background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.6)
+              ),
+              url(assets/blacklivesmatter4.jpeg);
+              background-position: bottom;">
+
+
+                <p>
+                    Floyd, a Minnesota resident, was arrested on Monday after he was accused of using a counterfeit $20 note at a local deli. His arrest was recorded by passers-by which shows a white policer officer, Derek Chauvin, restraining Floyd by kneeling on his neck for at least seven minutes despite the 46-year-old gasping for breath and repeatedly saying “I can’t breathe”. The officer remained in that position even after Floyd became unconscious. His unresponsive body was then taken to a hospital, where he was pronounced dead. The local chapter of the National Association for the Advancement of Colored People (NAACP) called the incident “public lynching without a rope.” This was not an isolated incident, George Floyd joins a list of many African Americans who have died such as Tony McDade, Ahmaud Arbery, Breonna Taylor, Nina Pop, and Sean Reed.
+                </p>
+                <p>
+                    The incident once again shines a light on the law enforcement’s bias against the African American minority, with Floyd’s death being cited as the most recent incident of racially driven police brutality.
+                </p>
+            </div>
+
+        </div>
+
+<!-- ================================== -->
+
+
+
+<div class="section2">
+            <img src="assets/the_plan_header_black.svg" height="25px">
+
+              <p class="theplan">
+              100% of your donations would go towards posting bail for those who would have otherwise been in jail for not being able to afford bail, to return home to their families and communities while awaiting their court dates.
+              </p>
+
+            <div class="section6image" style="background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.6)
+              ),
+              url(assets/blacklivesmatter3.jpg);
+              background-position: center;">
+
+            <p>
+            Former officer Derek Chauvin faces third degree murder charges in Floyd's death, while the other 3 police officers involved still need to be held accountable. Activist groups and protestors say they are inadequate. As of Saturday night, over 1,400 protestors have been arrested in 16 cities since Thursday.             
+            </p>
+            <p>
+            We are directing all donations to The Bail Project, a national revolving bail fund that provides free bail assistance to arrested protestors. The best part is that it’s a revolving fund. Once the courts release the bail money, the funds are returned to The Bail Project to be used to get another person out of jail. 
+            </p>
+
+            <p>
+            They are working to post bail in: Bronx, NY, Queens, NY, Detroit, MI, Spokane, WA, Compton, CA, San Diego, CA, Phoenix, AZ, Hays County, TX, Houston, TX, Oklahoma City, Tulsa, OK, Northwest AR, New Orleans, LA, St. Charles, MO, Louisville, KY, Lake County, IN, Indianapolis, IN, Augusta, GA, Charlotte, NC, Cleveland, OH.
+
+
+            </p>
+
+            </div>
+
+        </div>
+
+
+<!-- ============================= -->
+
+
+
+        <!-- <div class="section2">
+            <img src="assets/healthcare_profesionals_header.svg" height="30px">
+            <div class="section2image" style="background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.6)
+              ),
+              url(assets/blacklivesmatter2.jpg);
+              background-position: center;">
+
+                <div style="width: 100%;display: grid; grid-template-columns: 2fr 7fr;">
+                    <ul style="width: 50%; font-family: 'Inter', sans-serif;
+                        line-height: 1.5em;
+                        font-size: 20px;
+                        max-width: 600px;
+                        color: #fff;">
+                        <li>Bronx, NY</li>
+                        <li>Queens, NY</li>
+                        <li>Detroit, MI</li>
+                        <li>Spokane, WA</li>
+                        <li>Compton, CA</li>
+                        <li>San Diego, CA</li>
+                        <li>Phoenix, AZ</li>
+                        <li>Hays County, TX</li>
+                        <li>Houston, TX</li>
+                        <li>Oklahoma City</li>
+                    </ul>
+                    <ul style="width: 50%; font-family: 'Inter', sans-serif;
+                        line-height: 1.5em;
+                        font-size: 20px;
+                        max-width: 600px;
+                        color: #fff;">
+                        <li>Tulsa, OK</li>
+                        <li>Northwest AR</li>
+                        <li>New Orleans, LA</li>
+                        <li>St. Charles, MO</li>
+                        <li>Louisville, KY</li>
+                        <li>Lake County, IN</li>
+                        <li>Indianapolis, IN</li>
+                        <li>Augusta, GA/li>
+                        <li>Charlotte, NC</li>
+                        <li>Cleveland, OH</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+ -->
+
+        <!-- <div class="section2">
+            <img src="assets/pateince_header.svg" height="30px">
+            <div class="section2image" style="background-image: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8),
+                rgba(0, 0, 0, 0.6)
+              ),
+              url(assets/blacklivesmatter3.jpg);
+              background-position: center;">
+
+
+                <p>
+                The Bail Project is a National Revolving Bail Fund to combat mass incarceration at the front end of the system.
+They pay bail for people in need, reuniting families and restoring the presumption of innocence. Because bail is returned at the end of a case, donations to The Bail Project National Revolving Bail Fund can be recycled and reused to pay bail two to three times per year, maximizing the impact of every dollar. 
+100% of online donations are used to bring people home while awaiting their court dates.
+                </p>
+
+                
+
+            </div>
+
+        </div> -->
+
+
+        <div class="section3">
+            <img src="assets/non_profit_header.svg" height="25px">
+            <!-- <p>
+                <em>The minimum donation to receive an 80G certificate is Rs. 1000.</em>
+            </p> -->
+            <br>
+            <a href="https://bailproject.org/" target="_blank">
+                <img class="nonprofitimg" src="http://benefactory.live/img/camp/tbp_logo.png" width="200">
+            </a>
+            <br>
+
+            <p>We have partnered with Bail Projects: </p>
+
+            <ul style="max-width: 800px;">
+                <li>Your donations will sponsor 3 ply disposable surgical masks (ISO/CE Certified) 
+                </li>
+                <br>
+                <li>
+
+                <p>
+                The Bail Project is a National Revolving Bail Fund to combat mass incarceration at the front end of the system.
+                They pay bail for people in need, reuniting families and restoring the presumption of innocence. Because bail is returned at the end of a case, donations to The Bail Project National Revolving Bail Fund can be recycled and reused to pay bail two to three times per year, maximizing the impact of every dollar. 
+                </p>
+
+                </li>
+                <br>
+                <li>
+                100% of online donations are used to bring people home while awaiting their court dates.
+                                </li>
+            </ul>
+
+                
+        </div>
+        <div class="section5">
+            <div>
+                <img style="margin-left: -22px;" class="sec4icons" src="assets/Benefactory_Black.png" height="90"><br>
+                <p class="head_desc" style="font-family: 'Inter', sans-serif">
+                    We at Benefactory are on a mission to change the way the world responds to urgent crises. Our Act
+                    Now widget enables any online company to become a platform to collect donations for trusted
+                    charities. In doing this, we channel a collective movement wherein multiple online companies and
+                    millions of their customers can quickly make an impact when a crisis arises.
+                </p>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <div>
+                <span><a href"">Privacy Policy </a></span> &nbsp;&nbsp;|&nbsp;&nbsp; <span><a href"">Terms &
+                        Conditions</a></span>
+            </div>
+            <br>
+            <div>
+                <span>© Copyright Benefactory 2020</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/js/charge.js"></script>
+
+</body>
+</html>
